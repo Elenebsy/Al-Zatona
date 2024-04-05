@@ -1,7 +1,7 @@
 import { StyleSheet ,View,Text,Image,useWindowDimensions } from 'react-native'
 import React from 'react'
-import Education from '../assets/Education.png'
-import CustomButton from '../component/customButton'
+import Education from '../assets/images/Education.png'
+import CustomButton from '../components/customButton'
 const Welcome = () => {
   const {height} = useWindowDimensions();
   return (
@@ -21,7 +21,6 @@ container : {
 },
 Education : {
   width:"78%",
-  mmaxwidth :400,
   maxHeight:300,  
 
 },
@@ -36,7 +35,7 @@ span : {
 },
 text : {
   fontSize : 20  ,
-  color : "3A3967"
+  color : "#3A3967"
 }
 });
 export default Welcome 

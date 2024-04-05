@@ -1,13 +1,16 @@
-import { StyleSheet ,View,Text,Image,useWindowDimensions } from 'react-native'
+import { StyleSheet ,View,Text,Image,useWindowDimensions,ScrollView } from 'react-native'
 import React from 'react';
-import Education from '../assets/Education.png';
-import CustomButton from '../component/customButton';
-import CustomInput from '../component/customInput';
+import Education from '../assets/images/Education.png';
+import CustomButton from '../components/customButton';
+import CustomInput from '../components/customInput';
 const Welcome = () => {
   const {height} = useWindowDimensions();
   return (
+    <ScrollView>
     <View style={styles.container}>
-    <Image source={Education} style={[styles.Education,{height:height*0.3}]} resizeMethod='contain' />
+     
+   
+    <Image source={Education} style={[styles.Education,{height:height*0.3}]}  />
     <CustomInput placeholder="Email" />
     <CustomInput placeholder="Password" />
     <CustomButton text ="Sign in"/>
@@ -15,9 +18,10 @@ const Welcome = () => {
     <CustomButton text ="Sign in with Facebook" bgcolor="blue" txtcolor="white"/>
     <CustomButton text ="Sign Up"  type='Link' />
     <CustomButton text ="Forget Password" type='Link'/>
-
+    
 
     </View>
+    </ScrollView>
   );
 }
 const styles = StyleSheet.create({
@@ -27,8 +31,8 @@ container : {
   padding:20,
 },
 Education : {
-  width:"60%",
-  mmaxwidth :400,
+  width:"65%",
+  maxwidth :400,
   maxHeight:300,  
 
 },

@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { StyleSheet ,View,Text,Image,useWindowDimensions } from 'react-native'
 import React from 'react'
-import Education from '../assets/password-removebg-preview.png'
-import CustomButton from '../component/customButton'
-import CustomInput from '../component/customInput'
+import Education from '../assets/images/password-removebg-preview.png'
+import CustomButton from '../components/customButton'
+import CustomInput from '../components/customInput'
 const Welcome = () => {
 const {height} = useWindowDimensions();
 const [Email,setEmail] = useState("")

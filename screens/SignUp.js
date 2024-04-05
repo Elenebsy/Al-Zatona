@@ -1,14 +1,14 @@
-import { StyleSheet ,View,Text,Image,useWindowDimensions } from 'react-native'
+import { StyleSheet ,View,Text,Image,useWindowDimensions,ScrollView } from 'react-native'
 import React from 'react';
-import Education from '../assets/Education.png';
-import CustomButton from '../component/customButton';
-import CustomInput from '../component/customInput';
+import CustomButton from '../components/customButton';
+import CustomInput from '../components/customInput';
 const Welcome = () => {
 const {height} = useWindowDimensions();
 const handleSignUp = () =>{
     console.log("done");
 };
 return (
+<ScrollView>
     <View style={styles.container}>
     <Text style={styles.title}>create an Account</Text>
     <CustomInput placeholder="Name" />
@@ -18,10 +18,12 @@ return (
     <CustomButton text ="Sign up with Google" bgcolor="white" txtcolor="black" />
     <CustomButton text ="Sign up with Facebook" bgcolor="blue" txtcolor="white"/>
     <CustomButton text ="Sign IN"  type='Link' />
+
     
 
 
     </View>
+    </ScrollView>
 );
 }
 const styles = StyleSheet.create({
