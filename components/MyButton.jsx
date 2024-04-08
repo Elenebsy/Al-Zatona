@@ -1,13 +1,13 @@
 import { Pressable, StyleSheet, Text } from "react-native";
 import React from "react";
 
-export default function MyButton({ onPress, style, children, color }) {
+export default function MyButton ({ onPress, style, children, color }) {
   return (
     <Pressable
       onPress={onPress}
       style={({ pressed }) => [
         {
-          backgroundColor: color || "rgb(33, 150, 243)",
+          backgroundColor: color || "red",
           opacity: pressed ? 0.2 : 1,
         },
         styles.wrapperCustom,
